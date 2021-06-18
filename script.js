@@ -27,10 +27,12 @@ function rockPaperScissors() {
       return "You lose!"
     }
   };
-
+  
   document.getElementById("computerChoice").textContent = "The computer chose: " + computerPlay();
 
   document.getElementById("yourChoice").textContent = "You chose: " + humanPlay();
 
   document.getElementById("result").textContent = gameResult();
+
+  document.getElementById("result").setAttribute("style", "font-size:72px; text-align:center");
 }
