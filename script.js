@@ -4,27 +4,28 @@ function rockPaperScissors() {
 
   function humanPlay() {
     return document.getElementById("yourInput").value;
-  }
+  };
 
   function computerPlay() {
     return (randomNumber == 1) ? "Rock"
     : (randomNumber == 2) ? "Paper"
     : "Scissors";
   };
-
+  
   function gameResult() {
-    if (humanPlay() == computerPlay()) {
+    let x = humanPlay().toLowerCase();
+    let y = computerPlay().toLowerCase();
+    if (x == y) {
       return "Tie!"
-    } else if (humanPlay() == "Rock" && computerPlay() == "Scissors") {
+    } else if (x == "rock" && y == "scissors") {
       return "You win!"
-    } else if (humanPlay() == "Paper" && computerPlay() == "Rock") {
+    } else if (x == "paper" && y == "rock") {
       return "You win!"
-    } else if (humanPlay() == "Scissors" && computerPlay() == "Paper") {
+    } else if (x == "scissors" && y == "paper") {
       return "You win!"
     } else {
       return "You lose!"
     }
-    // if (humanPlay() == "Rock" && computerPlay() == "Scissors")
   };
 
   document.getElementById("computerChoice").textContent = "The computer chose: " + computerPlay();
@@ -32,5 +33,4 @@ function rockPaperScissors() {
   document.getElementById("yourChoice").textContent = "You chose: " + humanPlay();
 
   document.getElementById("result").textContent = gameResult();
-
 }
