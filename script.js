@@ -30,7 +30,7 @@ function rockPaperScissors() {
   
   document.getElementById("computerChoice").textContent = "The computer chose: " + computerPlay();
 
-  document.getElementById("yourChoice").textContent = "You chose: " + humanPlay();
+  document.getElementById("yourChoice").textContent = "You entered: " + humanPlay();
 
   document.getElementById("result").textContent = gameResult();
 

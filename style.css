@@ -4,8 +4,16 @@ body {
   margin-right:auto;
 }
 
-h1, #myForm {
+h1 {
+  font-size: 48px;
+}
+
+h1, #myForm, #yourChoice, #computerChoice, #result {
   text-align:center;
+}
+
+#result {
+  font-weight:700;
 }
 
 #yourInput {
